@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#fff7e8">
-  <meta name="description" content="成都嘉悦里周边手绘地图，点击地标查看活动内页。">
-  <title>嘉悦里周边手绘地图</title>
+  <meta name="description" content="嘉悦里周边地图，点击地标查看活动内页。">
+  <title>嘉悦里周边地图</title>
   <style>
     :root { color-scheme: light; --ink:#57351f; --accent:#b94d2e; --paper:#fff7e8; }
     * { box-sizing:border-box; }
@@ -39,8 +39,8 @@
 </head>
 <body>
   <main class="map-page" id="map-page">
-    <header class="topbar"><div class="brand">嘉悦里周边手绘地图</div><div class="hint">轻点地标或下方名称查看内页</div></header>
-    <div class="map-wrap"><div class="map-stage" id="map-stage"><img class="map-image" src="assets/第二页.png" alt="成都嘉悦里周边手绘地图" width="2243" height="1258" draggable="false"></div></div>
+    <header class="topbar"><div class="brand">嘉悦里周边地图</div><div class="hint">轻点地标或下方名称查看内页</div></header>
+    <div class="map-wrap"><div class="map-stage" id="map-stage"><img class="map-image" src="assets/第二页.png" alt="嘉悦里周边地图" width="2243" height="1258" draggable="false"></div></div>
     <section class="directory" aria-label="地标目录">
       <div class="grid" id="place-list"></div>
     </section>
@@ -52,6 +52,7 @@
   <script>
     const places = [
       {id:'science',name:'四川科技馆',en:'Sichuan Science and Technology Museum',file:'四川科技馆页.png',x:47.2,y:22.1,w:12,h:18},
+      {id:'art',name:'四川美术馆',en:'Sichuan Art Museum',file:'四川美术馆页.png',x:30.2,y:31.5,w:10,h:15},
       {id:'library',name:'四川省图书馆',en:'Sichuan Library',file:'四川省图书馆页.png',x:40.8,y:33.0,w:10,h:15},
       {id:'theatre',name:'四川大剧院',en:'Sichuan Grand Theatre',file:'四川大剧院页.png',x:60.2,y:33.5,w:13,h:15},
       {id:'museum',name:'成都博物馆',en:'Chengdu Museum',file:'成都博物馆页.png',x:36.8,y:47.0,w:13,h:15},
@@ -90,11 +91,11 @@
         detailTitle.textContent=p.name;
         detailImage.src=imagePath(p.file);
         detailImage.alt=p.name+'原始内页图片';
-        document.title=p.name+'｜嘉悦里周边手绘地图';
+        document.title=p.name+'｜嘉悦里周边地图';
         window.scrollTo(0,0);
       } else {
         detailImage.removeAttribute('src');
-        document.title='嘉悦里周边手绘地图';
+        document.title='嘉悦里周边地图';
         requestAnimationFrame(()=>window.scrollTo(0,mapScroll));
       }
     }
